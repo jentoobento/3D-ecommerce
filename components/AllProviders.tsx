@@ -1,8 +1,9 @@
-import { ReactNode } from 'react';
+import { ReactNode, useEffect } from 'react';
 import { SessionProvider, useSession } from 'next-auth/react';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import { ErrorBoundary } from 'react-error-boundary';
 import { ChakraProvider, CSSReset } from '@chakra-ui/react';
+import { useRouter } from 'next/router';
 
 import defaultTheme from '../styles/theme';
 
@@ -34,6 +35,14 @@ function AppWithAuth({ children }: { children: React.ReactNode }) {
  */
 export function AllProviders({ pageProps, children }: Props) {
   const { session } = pageProps;
+
+  const router = useRouter();
+
+  useEffect(() => {
+    if (router.pathname === '') {
+      router.push('/products');
+    }
+  }, [router]);
 
   return (
     <ChakraProvider
