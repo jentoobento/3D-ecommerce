@@ -39,8 +39,6 @@ export function AllProviders({ pageProps, children }: Props) {
   const router = useRouter();
 
   useEffect(() => {
-    console.log('router', router);
-
     if (router.pathname === '/') {
       router.push('/products');
     }
