@@ -1,5 +1,7 @@
 # 3D-e-commerce
 
+to run the project, install dependencies first with `yarn`, then `yarn-dev` to run the project in the browser.
+
 <img alt="CI STATUS" src="https://github.com/<OWNER>/<REPOSITORY>/actions/workflows/main.yml/badge.svg"/>
 
 ## Getting Started Tutorial
