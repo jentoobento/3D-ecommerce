@@ -50,6 +50,8 @@ export const getAlbum = async ({ token }: { token: string }) => {
   try {
     const res = await fetch(`${BASE_PATH}/artists/43ZHCT0cAZBISjO8DG9PnE/albums`, {
       method: 'GET',
+      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+      // @ts-ignore
       Authorization: token,
     });
 
