@@ -41,6 +41,11 @@ export const getTokenFromUrl = (urlWithToken: string) => {
   }
 };
 
+export const clearToken = () => {
+  window.sessionStorage.removeItem('spotifyToken');
+  window.sessionStorage.removeItem('temp_returnUrl');
+};
+
 export const getAlbum = async ({ token }: { token: string }) => {
   try {
     const res = await fetch(`${BASE_PATH}/artists/43ZHCT0cAZBISjO8DG9PnE/albums`, {

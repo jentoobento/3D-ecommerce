@@ -6,6 +6,7 @@ import { signOut } from 'next-auth/react';
 import { Logo } from '@/components/Logo';
 import { Nav } from '@/components/Nav';
 import { Footer } from '@/components/Footer';
+import { clearToken } from '@/services/spotify';
 
 interface Props {
   children: ReactNode;
@@ -16,6 +17,7 @@ export function LoggedInLayout({ children }: Props) {
 
   async function handleLogout() {
     signOut();
+    clearToken();
     await router.replace('/login');
   }
 
