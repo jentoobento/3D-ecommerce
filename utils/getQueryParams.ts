@@ -10,6 +10,8 @@ export function getQueryParams<T>(url: string, pathname: string | null): T {
 
   for (let i = 0; i < pairs.length; i++) {
     const pair = pairs[i].split('=');
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-ignore
     query[decodeURIComponent(pair[0])] = decodeURIComponent(pair[1] || '');
   }
 
