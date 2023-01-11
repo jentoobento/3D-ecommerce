@@ -1,9 +1,9 @@
 import { ReactNode } from 'react';
 import { Box, Flex } from '@chakra-ui/react';
 
-import { ButtonLink } from '@/components/Link';
 import { Logo } from '@/components/Logo';
 import { Footer } from '@/components/Footer';
+import { SpotifyTrigger } from '@/components/SpotifyTrigger';
 
 interface Props {
   children: ReactNode;
@@ -16,9 +16,7 @@ export function LoggedOutLayout({ children }: Props) {
         <Flex p={4}>
           <Logo />
 
-          <ButtonLink href="/login" ml="auto" display={{ base: 'none', lg: 'inline-flex' }}>
-            Login
-          </ButtonLink>
+          <SpotifyTrigger styles={{ ml: 'auto', display: { base: 'none', lg: 'inline-flex' } }} />
         </Flex>
       </>
 

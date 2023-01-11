@@ -25,7 +25,10 @@ type Props = {
 function AppWithAuth({ children }: { children: React.ReactNode }) {
   const { data: session } = useSession();
 
-  if (session?.user) return <LoggedInLayout>{children}</LoggedInLayout>;
+  const token = typeof window !== 'undefined' ? window.sessionStorage.getItem('spotifyToken') : '';
+
+  if (session?.user || (token && token !== 'denied'))
+    return <LoggedInLayout>{children}</LoggedInLayout>;
 
   return <LoggedOutLayout>{children}</LoggedOutLayout>;
 }
