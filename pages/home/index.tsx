@@ -5,13 +5,13 @@ function Page() {
   return (
     <>
       <Head>
-        <title>Products</title>
+        <title>Record Store</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <Center>
         <Heading size="lg" data-testid="welcome-header">
-          Products Page
+          Record Store
         </Heading>
       </Center>
     </>

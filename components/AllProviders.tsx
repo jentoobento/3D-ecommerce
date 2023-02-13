@@ -43,7 +43,7 @@ export function AllProviders({ pageProps, children }: Props) {
 
   useEffect(() => {
     if (router.pathname === '/') {
-      router.push('/products');
+      router.push('/home');
     }
   }, [router]);
 
