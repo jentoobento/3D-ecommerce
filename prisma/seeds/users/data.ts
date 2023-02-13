@@ -9,13 +9,13 @@ const INITIAL_PASSWORD = 'test1234';
 
 const initialDevUsers: Prisma.UserCreateInput[] = [
   {
-    email: 'barry.allen@speedforce.net',
+    email: 'test@devtest.com',
     password: hashPassword(INITIAL_PASSWORD),
     roles: [Role.ADMIN],
     profile: {
       create: {
-        firstName: 'Barry',
-        lastName: 'Allen',
+        firstName: 'John',
+        lastName: 'Doe',
       },
     },
   },
@@ -34,8 +34,8 @@ const initialProdUsers: Prisma.UserCreateInput[] = [
     roles: [Role.ADMIN],
     profile: {
       create: {
-        firstName: 'EB',
-        lastName: 'Admin',
+        firstName: 'Jane',
+        lastName: 'Doe',
       },
     },
   },
