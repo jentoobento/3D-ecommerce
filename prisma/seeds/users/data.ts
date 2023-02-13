@@ -29,7 +29,7 @@ const INITIAL_PROD_PASSWORD = 'strong@password';
 
 const initialProdUsers: Prisma.UserCreateInput[] = [
   {
-    email: 'apps@echobind.com',
+    email: 'test@test.com',
     password: hashPassword(INITIAL_PROD_PASSWORD),
     roles: [Role.ADMIN],
     profile: {

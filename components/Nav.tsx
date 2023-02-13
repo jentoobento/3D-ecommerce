@@ -34,7 +34,7 @@ export function Nav() {
         </MenuItem>
 
         <MenuItem>
-          <Link href="https://github.com/echobind" isExternal>
+          <Link href="https://www.google.com" isExternal>
             External
           </Link>
         </MenuItem>
@@ -46,7 +46,7 @@ export function Nav() {
 
       <Link href="/#features">Link 2</Link>
       <Link href="/#tech">Link 3</Link>
-      <Link href="https://github.com/echobind/" isExternal>
+      <Link href="https://www.google.com" isExternal>
         External
       </Link>
     </Stack>

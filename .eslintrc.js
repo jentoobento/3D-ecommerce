@@ -1,4 +1,4 @@
 module.exports = {
-  extends: ['plugin:echobind/react'],
+  extends: [],
   ignorePatterns: ['generated', 'node_modules/', 'types', 'scripts'],
 };

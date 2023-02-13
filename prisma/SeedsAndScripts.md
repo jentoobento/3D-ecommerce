@@ -43,7 +43,7 @@ In the event your model has a relationship dependency ie. Accounts, Organization
 ```ts
   const initialDevUsers = (orgId: string): UserCreateInput[] => [
     {
-      email: 'john.doe@echobind.com',
+      email: 'john.doe@test.com',
       organization: { connect: { id: orgId } },
       // ...other create data
     }
